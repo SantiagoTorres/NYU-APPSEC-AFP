@@ -8,7 +8,6 @@ from tests import test_base
 #       * testing for CLEAR methods
 #       * testing for QUIT methods
 #       * running the example sequence
-# 
 def base_suite():
     suite = unittest.TestSuite()
     suite.addTest(test_base.base_suite())
