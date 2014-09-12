@@ -17,22 +17,17 @@ import threadServlet
 #       * testing for QUIT methods
 #       * running the example sequence
 class test_base(unittest.TestCase):
-
-    # a placeholder to test the unittest framework
-    def test_dummy_test(self):
-        self.assertTrue(True)
+    
 
     # tests whether the connection is alive
     def test_open_close(self):
         afpserver = server.afp_server(10)
         afpserver.start()
        
-        print("connecting 11 times...")
         for i in range(1,11):
             client = socket.create_connection(('127.0.0.1',
                 afpserver.port))
             client.close()
-        print("done")
 
     # tests the put scenarios, different lengths, etc
     def test_put(self):
